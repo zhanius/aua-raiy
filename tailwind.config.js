@@ -10,8 +10,14 @@ export default {
   ],
   
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'dela':['Dela Gothic One', 'sans-serif'],
+        'rowdies':['Rowdies', 'sans-serif'],
+        'bodoni':['Bodoni Moda SC', 'serif'],
+        'sawarabi':['Sawarabi Mincho', 'serif']
+      }
+    },
   },
   plugins: [],
 }
-
