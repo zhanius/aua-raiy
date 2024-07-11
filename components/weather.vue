@@ -42,7 +42,7 @@
     },
     methods:{
         getWeatherIconUrl(iconCode) {
-          return `_nuxt/components/icons/${iconCode}.png`;
+          return `./components/icons/${iconCode}.png`;
         }
     }
   };
