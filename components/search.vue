@@ -3,7 +3,7 @@
     class="bg-violet-200 flex items-center flex-col justify-center min-h-screen font-rowdies font-bold"
   >
     <div class="flex max-w-2xl w-full justify-between mb-8">
-      <h2 class="text-4xl sm:xl md:xl lg:5xl">Auaraiy.kz</h2>
+      <h2 class="text-4xl sm:xl md:xl lg:5xl">Aua-raiy</h2>
       <a class="float-left w-10" target="_blank" href="https://t.me/zhansuuw">
         <img
           src="https://img.icons8.com/?size=64&id=HTBOiI9JKlWY&format=png"
