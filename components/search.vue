@@ -140,29 +140,12 @@ export default {
 
         this.weatherVisible = true;
         this.errorMessage = "";
-
-        localStorage.setItem("weatherData", JSON.stringify(this.weatherData));
-        localStorage.setItem(
-          "weatherVisible",
-          JSON.stringify(this.weatherVisible)
-        );
       } catch (error) {
         this.errorMessage = "City not found. Please try again.";
         this.weatherData = null;
         this.weatherVisible = false;
       }
     },
-    loadWeatherData() {
-      const storedWeatherData = localStorage.getItem("weatherData");
-      const storedWeatherVisible = localStorage.getItem("weatherVisible");
-      if (storedWeatherData && storedWeatherVisible) {
-        this.weatherData = JSON.parse(storedWeatherData);
-        this.weatherVisible = JSON.parse(storedWeatherVisible);
-      }
-    },
-  },
-  mounted() {
-    this.loadWeatherData();
   },
 };
 </script>
