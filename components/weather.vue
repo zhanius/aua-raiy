@@ -19,8 +19,7 @@
       >
         {{ temperature }}
         <img
-          :src="getWeatherIconUrl(icon)"
-          :alt="description"
+          :src="icon"
           class="w-20 sm:w-30 lg:w-35 md:w-45 mx-5"
         />
       </h1>
@@ -77,10 +76,11 @@ export default {
       required: true,
     },
   },
-  methods: {
-    getWeatherIconUrl(iconCode) {
-      return `_nuxt/components/icons/${iconCode}.png`;
-    },
-  },
+  // methods: {
+  //   getWeatherIconUrl(iconCode) {
+  //     return `_nuxt/components/icons/${iconCode}.png`;
+  //     return `_nuxt/static/img/${iconCode}.png`;
+  //   },
+  // },
 };
 </script>

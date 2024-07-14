@@ -7,12 +7,12 @@
     "module": true,
     "resourceType": "script"
   },
-  "C:/Users/shakh/Desktop/weather/weather-HL/node_modules/nuxt/dist/app/entry.js": {
+  "C:/Users/shakh/Desktop/auaraiy/auaraiy.kz/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
-    "file": "C:/Users/shakh/Desktop/weather/weather-HL/node_modules/nuxt/dist/app/entry.js"
+    "file": "C:/Users/shakh/Desktop/auaraiy/auaraiy.kz/node_modules/nuxt/dist/app/entry.js"
   }
 }
