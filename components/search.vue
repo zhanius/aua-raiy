@@ -162,7 +162,7 @@ export default {
         this.weatherVisible = true;
         this.errorMessage = "";
       } catch (error) {
-        this.errorMessage = "Йala tabylmady. Qaitalap körıñız.";
+        this.errorMessage = "Qala tabylmady. Qaitalap körıñız.";
         this.weatherData = null;
         this.weatherVisible = false;
       }
