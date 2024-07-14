@@ -1,5 +1,5 @@
 # aua raiy 
-deployment-link: https://auaraiy.onrender.com/
+deployment-link: https://aua-raiy.onrender.com/
 # installation instructions
 follow these steps to install and run the project:
 1. clone the repository:
