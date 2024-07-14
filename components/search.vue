@@ -1,27 +1,48 @@
 <template>
-  <div class="bg-violet-200 flex items-center flex-col justify-center min-h-screen font-rowdies font-bold">
+  <div
+    class="bg-violet-200 flex items-center flex-col justify-center min-h-screen font-rowdies font-bold"
+  >
     <div class="flex max-w-2xl w-full justify-between mb-8">
       <h2 class="text-4xl sm:xl md:xl lg:5xl">Auaraiy.kz</h2>
       <a class="float-left w-10" target="_blank" href="https://t.me/zhansuuw">
-        <img src="https://img.icons8.com/?size=64&id=HTBOiI9JKlWY&format=png" alt="" />
+        <img
+          src="https://img.icons8.com/?size=64&id=HTBOiI9JKlWY&format=png"
+          alt=""
+        />
       </a>
     </div>
     <div
-      class="bg-orange-50 border-black border-2 p-2.5 outline-none shadow-[5px_5px_0px_rgba(0,0,0,1)] max-w-2xl w-full sm:px-10 sm:py-6 flex flex-col justify-center gap-6 items-start">
+      class="bg-orange-50 border-black border-2 p-2.5 outline-none shadow-[5px_5px_0px_rgba(0,0,0,1)] max-w-2xl w-full sm:px-10 sm:py-6 flex flex-col justify-center gap-6 items-start"
+    >
       <div class="input-div w-full flex gap-2 sm:gap-3">
-        <input id="search" v-model="searchQuery"
+        <input
+          id="search"
+          v-model="searchQuery"
           class="flex-grow text-lg sm:text-xl md:text-2xl text-black border-black border-2 p-2.5 outline-none shadow-[5px_5px_0px_rgba(0,0,0,1)] focus:bg-[#f3d6f0] active:shadow-[2px_2px_0px_rgba(0,0,0,1)]"
-          placeholder="Enter Your Location" />
-        <button @click="searchCity"
+          placeholder="Enter Your Location"
+        />
+        <button
+          @click="searchCity"
           class="bg-slate-300 border-black border-2 p-2.5 outline-none shadow-[5px_5px_0px_rgba(0,0,0,1)] active:shadow-[2px_2px_0px_rgba(0,0,0,1)] flex items-center justify-center"
-          type="button">
-          <img src="../assets/magnifying-glass.png" alt="Search" class="w-6 h-6" />
+          type="button"
+        >
+          <img
+            src="../assets/magnifying-glass.png"
+            alt="Search"
+            class="w-6 h-6"
+          />
         </button>
       </div>
       <p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
       <div class="w-full" v-if="weatherVisible">
-        <Weather :city="weatherData.city" :temperature="weatherData.temperature" :description="weatherData.description"
-          :humidity="weatherData.humidity" :icon="weatherData.icon" :wind="weatherData.wind" />
+        <Weather
+          :city="weatherData.city"
+          :temperature="weatherData.temperature"
+          :description="weatherData.description"
+          :humidity="weatherData.humidity"
+          :icon="weatherData.icon"
+          :wind="weatherData.wind"
+        />
       </div>
     </div>
   </div>
@@ -92,12 +113,12 @@ export default {
     },
     validateInput() {
       if (!this.searchQuery) {
-        this.errorMessage = "Please enter a city name.";
+        this.errorMessage = "Qala atauyn dūrys engızıñız.";
         return false;
       }
       const cityNamePattern = /^[a-zA-Z\s-]+$/;
       if (!cityNamePattern.test(this.searchQuery)) {
-        this.errorMessage = "Please enter a valid city name.";
+        this.errorMessage = "Qala atauyn dūrys engızıñız.";
         return false;
       }
       this.errorMessage = "";
@@ -118,13 +139,13 @@ export default {
         const response = await fetch(API_URL);
 
         if (!response.ok) {
-          throw new Error("City not found");
+          throw new Error("Qala tabylmady.");
         }
 
         const data = await response.json();
 
         if (data.cod !== 200) {
-          throw new Error("City not found");
+          throw new Error("Qala tabylmady.");
         }
 
         const iconCode = data.weather[0].icon;
@@ -141,7 +162,7 @@ export default {
         this.weatherVisible = true;
         this.errorMessage = "";
       } catch (error) {
-        this.errorMessage = "City not found. Please try again.";
+        this.errorMessage = "Йala tabylmady. Qaitalap körıñız.";
         this.weatherData = null;
         this.weatherVisible = false;
       }
